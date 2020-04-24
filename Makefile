@@ -166,21 +166,21 @@ mkfs: mkfs.c fs.h
 .PRECIOUS: %.o
 
 UPROGS=\
-	_cat\
-	_echo\
-	_forktest\
-	_grep\
-	_init\
-	_kill\
-	_ln\
-	_ls\
-	_mkdir\
-	_rm\
-	_sh\
-	_stressfs\
-	_usertests\
-	_wc\
-	_zombie\
+	user/cat\
+	user/echo\
+	user/forktest\
+	user/grep\
+	user/init\
+	user/kill\
+	user/ln\
+	user/ls\
+	user/mkdir\
+	user/rm\
+	user/sh\
+	user/stressfs\
+	user/usertests\
+	user/wc\
+	user/zombie\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
